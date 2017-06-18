@@ -33,3 +33,11 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    Starticket\AkaBundle\:
+        resource: '../../src/Starticket/AkaBundle/*'
+        exclude: '../../src/Starticket/AkaBundle/{Entity,Repository,Tests}'
+
+    Starticket\AkaBundle\Controller\:
+        resource: '../../src/Starticket/AkaBundle/Controller'
+        public: true
+        tags: ['controller.service_arguments']
