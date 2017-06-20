@@ -110,7 +110,81 @@ class Row0 extends React.Component {
     }
 }
 
+function tick() {
+    ReactDOM.render(
+        <Row0 />,
+        document.getElementById('row0')
+    );
+
+}
+
+setInterval(tick,1000)
+//=======================================================
+function Row1Span (props) {
+    return (
+        <span id={props.id} className={props.class}>
+           {props.value}
+       </span>
+    );
+}
+
+function Row1Div (props){
+    return (
+        <div id={props.id} className={props.class} style={props.style}>
+            {props.value}
+        </div>
+    );
+}
+
+class Row1 extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            styleBase: {},
+            styleBox1: {},
+            styleBox2: {},
+            styleBox3: {},
+            styleBox4: {},
+            styleBox5: {},
+        };
+    }
+
+    componentDidMount() {
+        this.setState({
+            styleBase: {
+                width: window.innerWidth,
+                height: Math.floor(window.innerHeight*0.7/12),
+                marginTop: Math.floor(window.innerHeight*0.7/12),
+            },
+            styleBox1: {
+                width: window.innerWidth / 5,
+                height: Math.floor(window.innerHeight*0.7/12),
+            },
+            styleBox2: {
+                width: window.innerWidth / 5,
+                height: Math.floor(window.innerHeight*0.7/12),
+                marginLeft: window.innerWidth / 5,
+            },
+            styleBox3: {
+                width: window.innerWidth / 5,
+                height: Math.floor(window.innerHeight*0.7/12),
+                marginLeft: window.innerWidth * 2 / 5,
+            },
+            styleBox4: {
+                width: window.innerWidth / 5,
+                height: Math.floor(window.innerHeight*0.7/12),
+                marginLeft: window.innerWidth * 3/ 5,
+            },
+            styleBox5: {
+                width: window.innerWidth / 5,
+                height: Math.floor(window.innerHeight*0.7/12),
+                marginLeft: window.innerWidth * 4 / 5,
+            },
+        });
+    }
+}
+
 ReactDOM.render(
-    <Row0 />,
-    document.getElementById('row0')
+    <Row1 />,
+    document.getElementById('row1')
 );

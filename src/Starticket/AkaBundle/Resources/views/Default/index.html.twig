@@ -414,7 +414,7 @@
         </div>
     </div>
 
-    <!--<div class="container">
+    {#<div class="container">
         <button class="btn btn-success" data-toggle="modal" data-target="#messageModal">Test message</button>
         <button class="btn btn-success" data-toggle="modal" data-target="#enterCardNumberModal">Test card number</button>
         <button class="btn btn-success" data-toggle="modal" data-target="#enterConcessionCodeModal">Test concession code</button>
@@ -422,11 +422,11 @@
         <button class="btn btn-success" data-toggle="modal" data-target="#paymentsModal">Test payment</button>
         <button class="btn btn-success" data-toggle="modal" data-target="#helpModal">Test help</button>
         <button class="btn btn-success" data-toggle="modal" data-target="#subMenuModal">Test submenu</button>
-    </div>-->
+    </div>#}
 
     <div id="windowMain">
-        <div id="row0">
-        </div>
+        <div id="row0"></div>
+        <div id="row1"></div>
     </div>
 {% endblock %}
 
@@ -437,14 +437,4 @@
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
     <script type="text/babel" src="{{ asset('js/main.react.js') }}"></script>
-    <!--<script>
-        $(document).ready(function(){
-            $("#root").click(function(){
-                console.log("clicked");
-                var par = document.createElement("p");
-                par.innerHTML = '<strong>jQuery created</strong>';
-                $(par).hide().appendTo("body").fadeIn("slow");
-            });
-        });
-    </script>-->
 {% endblock %}
