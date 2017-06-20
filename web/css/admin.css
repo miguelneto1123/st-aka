@@ -1,0 +1,426 @@
+#windowMainDisabled{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    z-index:1000;   
+    display: none;
+}
+#adminrow1{
+    position: absolute;
+    background-color: #f8f8f8;
+    height: 100%;
+    z-index: 1;
+}
+
+#adminrow1_box1{
+    position: absolute;
+    float:left;
+    text-align: center;
+    height: 100%;
+}
+#adminrow1_box1_table1{
+    margin: 0 auto;
+    height: 100%;
+}
+
+#adminrow1_box2{
+    position: absolute;
+    float:left;
+    height: 100%;
+    color: #5998d4;
+    margin: auto 0;
+}
+#adminrow1_box3{
+    position: absolute;
+    float:left;
+    height: 100%;
+    text-align: right;
+}
+
+#adminrow1_box2_table1 {
+    width: 100%;
+    margin: auto 0;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 14px;
+    color: #999;
+    overflow-y: hidden;
+}
+#adminrow1_box2_table1 tr td:nth-child(1){
+    width: fit-content;
+}
+#adminrow1_box2_table1 tr td:nth-child(2){
+    font-size: 12px;
+    text-align: right;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    text-overflow: ellipsis;
+}
+#adminrow1_belowbox{
+    position: absolute;
+    float:top;
+    z-index: 2;
+    opacity: 0.3;
+}
+#adminrow1_belowbox table tr td{
+    text-align: center;
+    margin: auto 0;
+}
+
+
+#adminrow2{
+    position: absolute;
+    float:top;
+}
+#menuContents{
+    position: absolute;
+    background-color: #eee;
+    margin: 0 auto;
+}
+.menuContents_tables{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+}
+.menuContents_tables tr td:first-child{
+    width: 30%;
+}
+.menuContents_boxes{
+    position: absolute;
+    width: 100%;
+}
+
+
+
+#menu1content, #menu2content, #menu3content, #menu4content, #menu5content{
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+}
+#menu1content table tr td:first-child, #menu2content table tr td:first-child, #menu3content table tr td:first-child, #menu4content table tr td:first-child, #menu5content table tr td:first-child{
+    width: 20%;
+    vertical-align: middle;
+    margin: auto 0;
+    text-align: right;
+}
+
+
+
+
+
+/* Switches */
+.switch-2, .switch-3, .switch-4{
+    margin:auto 0;
+    overflow: visible;
+}
+.switch-ios.switch-toggle a {
+    background-color: #428BCA;
+}
+.switch-ios.switch-toggle label {
+    font-weight: normal;
+    cursor: pointer;
+}
+.switch-ios.switch-toggle {
+    background-color: #fafafa;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+}
+.switch-ios input:checked + label {
+    color: #fff;
+    font-weight: normal;
+}
+.twoExceptSwitch{
+    width: 300px;
+}
+.rowDisabled{
+    z-index: 2;
+    background-color: #eee;
+    opacity: 0.7;
+}
+
+
+
+
+/* checkbox */
+input[type=checkbox].fav-checkbox {
+    display:none;
+}
+input[type=checkbox].fav-checkbox + label.fav-label {
+    padding-left:40px;
+    height:25px; 
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    cursor:pointer;
+    font-weight: normal;
+    display: inline-block;
+    line-height: 29px;
+}
+input[type=checkbox].fav-checkbox:checked + label.fav-label {
+    background-position: 0 -25px;
+}
+label.fav-label {
+    background-image:url(images/favcheckbox.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+input[type=checkbox].pre-checkbox {
+    display:none;
+}
+input[type=checkbox].pre-checkbox + label.pre-label {
+    padding-left:25px;
+    height:15px; 
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    cursor:pointer;
+    font-weight: normal;
+    display: inline-block;
+    line-height: 15px;
+}
+input[type=checkbox].pre-checkbox:checked + label.pre-label {
+    background-position: 0 -15px;
+}
+label.pre-label {
+    background-image:url(images/precheckbox.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+
+/* Scrollers */
+#wrapper_list_show_scroller, #wrapper_list_cont_scroller, #wrapper_list_cat_scroller, #wrapper_list_conc_scroller {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+/*    padding: 1%; */
+    border: 1px solid #ccc;
+    background-color: #ddd;
+}
+
+.scrollers {
+    position: absolute;
+/*	z-index: 1; */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+
+
+
+
+
+/* Shows */
+#list_show div.itemFavDiv, #list_show div.itemPreDiv{
+    cursor: pointer;
+}
+#showsStatusBar{
+    width: 100%;
+}
+#showsStatusBar tr td table{
+    width: 100%;
+}
+#showsStatusBar tr td table tr td:first-child{
+    text-align: left;
+}
+#showsStatusBar tr td table tr td:nth-child(2){
+    text-align: right;
+}
+#list_show_msg{
+    text-align: center;
+}
+#showStatsLeft{
+    text-align: left;
+}
+
+
+
+
+/* Contingents */
+#list_cont div.itemFavDiv, #list_cont div.itemPreDiv{
+    cursor: pointer;
+}
+#contsStatusBar{
+    width: 100%;
+}
+#contsStatusBar tr td table{
+    width: 100%;
+}
+#contsStatusBar tr td table tr td:first-child{
+    text-align: left;
+}
+#contsStatusBar tr td table tr td:nth-child(2){
+    text-align: right;
+}
+#list_cont_msg{
+    text-align: center;
+}
+#contStatsLeft{
+    text-align: left;
+}
+
+
+
+
+
+
+/* Categories */
+#list_cat div.itemFavDiv, #list_cat div.itemPreDiv{
+    cursor: pointer;
+}
+#catsStatusBar{
+    width: 100%;
+}
+#catsStatusBar tr td table{
+    width: 100%;
+}
+#catsStatusBar tr td table tr td:first-child{
+    text-align: left;
+}
+#catsStatusBar tr td table tr td:nth-child(2){
+    text-align: right;
+}
+#list_cat_msg{
+    text-align: center;
+}
+#catStatsLeft{
+    text-align: left;
+}
+
+
+/* Concessions */
+#list_conc div.itemFavDiv, #list_conc div.itemPreDiv{
+    cursor: pointer;
+}
+#concsStatusBar{
+    width: 100%;
+}
+#concsStatusBar tr td table{
+    width: 100%;
+}
+#concsStatusBar tr td table tr td:first-child{
+    text-align: left;
+}
+#concsStatusBar tr td table tr td:nth-child(2){
+    text-align: right;
+}
+#list_conc_msg{
+    text-align: center;
+}
+#concStatsLeft{
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+/* public */
+.leftAlign{
+    text-align: left;
+}
+.rightAlign{
+    text-align: right;
+}
+.topAlign{
+    vertical-align: top!important;
+}
+a{
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* search */
+#list_show div, #list_cont div, #list_cat div, #list_conc div{
+    height: 50px;
+    text-align: left;
+/*    margin-top: 10px; */
+    border: 1px solid #c1c1c1;    
+    background-color: #eee;    
+    margin: 8px 0 8px 10px;
+    width: auto;
+    padding-left: 10px;
+    line-height: 50px;
+    width: 85%;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.searchinput{
+    width: 100%;
+}
+.searchtables tr td{
+    padding: 0!important;
+}
+.searchtables tr td:nth-child(2){
+    text-align: center;
+}
+.searchbuttons{
+    cursor: pointer;
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+/* buttons */
+.mainbtn{
+    -webkit-border-bottom-right-radius: 0px;
+    -moz-border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    -webkit-border-top-right-radius: 0px;
+    -moz-border-top-right-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 150px;
+}
