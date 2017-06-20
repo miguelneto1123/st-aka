@@ -18,7 +18,6 @@ class Row0 extends React.Component {
     constructor(){
         super();
         this.state = {
-           styleBase: {},
            styleBox1: {},
            styleBox2: {},
         };
@@ -26,17 +25,12 @@ class Row0 extends React.Component {
 
     componentDidMount() {
         this.setState({
-            styleBase: {
-                width: window.innerWidth,
-                height: Math.floor(window.innerHeight*0.7/12),
-            },
             styleBox1: {
                 width: window.innerWidth / 5,
                 height: Math.floor(window.innerHeight*1.4/12),
             },
             styleBox2: {
                 width: window.innerWidth * 4 / 5,
-                height: Math.floor(window.innerHeight*0.7/12),
                 marginLeft: window.innerWidth / 5,
             },
         });
@@ -47,7 +41,7 @@ class Row0 extends React.Component {
         const rowWidth = this.state.styleBox1.width*8/10;
         sourceLogo += rowWidth > 0 && rowWidth < 150 ? "logo100.png" : rowWidth < 200 ? "logo150.png" : "logo200.png";
         return(
-            <div style={this.state.styleBase} className="notop">
+            <div>
                 <Row0Div
                     value={
                         <table id="row0_box1_table1">
@@ -140,7 +134,6 @@ class Row1 extends React.Component {
     constructor(){
         super();
         this.state = {
-            styleBase: {},
             styleBox1: {},
             styleBox2: {},
             styleBox3: {},
@@ -151,36 +144,94 @@ class Row1 extends React.Component {
 
     componentDidMount() {
         this.setState({
-            styleBase: {
-                width: window.innerWidth,
-                height: Math.floor(window.innerHeight*0.7/12),
-                marginTop: Math.floor(window.innerHeight*0.7/12),
-            },
             styleBox1: {
                 width: window.innerWidth / 5,
-                height: Math.floor(window.innerHeight*0.7/12),
             },
             styleBox2: {
                 width: window.innerWidth / 5,
-                height: Math.floor(window.innerHeight*0.7/12),
                 marginLeft: window.innerWidth / 5,
             },
             styleBox3: {
                 width: window.innerWidth / 5,
-                height: Math.floor(window.innerHeight*0.7/12),
                 marginLeft: window.innerWidth * 2 / 5,
             },
             styleBox4: {
                 width: window.innerWidth / 5,
-                height: Math.floor(window.innerHeight*0.7/12),
                 marginLeft: window.innerWidth * 3/ 5,
             },
             styleBox5: {
                 width: window.innerWidth / 5,
-                height: Math.floor(window.innerHeight*0.7/12),
                 marginLeft: window.innerWidth * 4 / 5,
             },
         });
+    }
+
+    render() {
+        return (
+            <div>
+                <div id="row1_box1" style={this.state.styleBox1}>
+                    <table id="row1_box1_table1">
+                        <tr>
+                            <td>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="row1_box2" style={this.state.styleBox2}>
+                    <table id="row1_box2_table1" class="shadow8">
+                        <tr>
+                            <td>
+                                <div id="row1_box2_table1_infodiv"></div>
+                                <div id="row1_box2_table1_inputdiv"><input type="text" id="row1_box2_table1_inputfield" /></div>
+                            </td>
+                            <td>
+                                <div id="row1_box2_table1_buttondiv"><span class="glyphicon glyphicon-search searchbtnshow"></span></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="row1_box3" style={this.state.styleBox3}>
+                    <table id="row1_box3_table1" class="shadow8">
+                        <tr>
+                            <td>
+                                <div id="row1_box3_table1_infodiv"></div>
+                                <div id="row1_box3_table1_inputdiv"><input type="text" id="row1_box3_table1_inputfield"/></div>
+                            </td>
+                            <td>
+                                <div id="row1_box3_table1_buttondiv"><span class="glyphicon glyphicon-search searchbtncont"></span></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="row1_box4" style={this.state.styleBox4}>
+                    <table id="row1_box4_table1" class="shadow8">
+                        <tr>
+                            <td>
+                                <div id="row1_box4_table1_infodiv"></div>
+                                <div id="row1_box4_table1_inputdiv"><input type="text" id="row1_box4_table1_inputfield"/></div>
+                            </td>
+                            <td>
+                                <div id="row1_box4_table1_buttondiv"><span class="glyphicon glyphicon-search searchbtncat"></span></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="row1_box5" style={this.state.styleBox5}>
+                    <table id="row1_box5_table1" class="shadow8">
+                        <tr>
+                            <td>
+                                <div id="row1_box5_table1_infodiv"></div>
+                                <div id="row1_box5_table1_inputdiv"><input type="text" id="row1_box5_table1_inputfield"/></div>
+                            </td>
+                            <td>
+                                <div id="row1_box5_table1_buttondiv"><span class="glyphicon glyphicon-search searchbtnconc"></span></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        );
     }
 }
 

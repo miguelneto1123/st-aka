@@ -425,8 +425,11 @@
     </div>#}
 
     <div id="windowMain">
-        <div id="row0"></div>
-        <div id="row1"></div>
+        <div id="row0" class="notop"></div>
+        <div id="row1" class="shadow3 notop"></div>
+        <div id="row2"></div>
+        <div id="row3" class="shadow4 nobottom"></div>
+        <div id="row4" class="shadow4"></div>
     </div>
 {% endblock %}
 
@@ -437,4 +440,13 @@
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
     <script type="text/babel" src="{{ asset('js/main.react.js') }}"></script>
+    <script type="text/javascript">
+        const winHeight = window.innerHeight;
+        const winWidth = window.innerWidth;
+        document.getElementById('row0').setAttribute('style','width:'+winWidth+'px;height:'+winHeight*0.7/12+'px;');
+        document.getElementById('row1').setAttribute('style','width:'+winWidth+'px;height:'+winHeight*0.7/12+'px;margin-top:'+winHeight*0.7/12+'px;');
+        document.getElementById('row2').setAttribute('style','width:'+winWidth+'px;height:'+winHeight*7.3/12+'px;margin-top:'+winHeight*1.4/12+'px;');
+        document.getElementById('row3').setAttribute('style','width:'+winWidth+'px;height:'+winHeight*2.5/12+'px;margin-top:'+winHeight*8.7/12+'px;');
+        document.getElementById('row4').setAttribute('style','width:'+winWidth+'px;height:'+winHeight*0.8/12+'px;margin-top:'+winHeight*11.2/12+'px;');
+    </script>
 {% endblock %}
