@@ -1,10 +1,10 @@
-{%  extends 'base.html.twig' %}
+{%  extends '@Aka/base.html.twig' %}
 
 {% block title %}Mobile Boxoffice{% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/aka/css/style.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -224,19 +224,19 @@
                                                     </tr>
                                                     <tr>
                                                         <td>
-                                                            <button style="background:url({{ asset('images/note10.gif') }}) no-repeat;" data-value="10" class="cashimgkeypad"></button>
+                                                            <button style="background:url({{ asset('bundles/aka/images/note10.gif') }}) no-repeat;" data-value="10" class="cashimgkeypad"></button>
                                                         </td>
                                                         <td>
-                                                            <button style="background:url({{ asset('images/note20.gif') }}) no-repeat;" data-value="20" class="cashimgkeypad"></button>
+                                                            <button style="background:url({{ asset('bundles/aka/images/note20.gif') }}) no-repeat;" data-value="20" class="cashimgkeypad"></button>
                                                         </td>
                                                         <td>
-                                                            <button style="background:url({{ asset('images/note50.gif') }}) no-repeat;" data-value="50" class="cashimgkeypad"></button>
+                                                            <button style="background:url({{ asset('bundles/aka/images/note50.gif') }}) no-repeat;" data-value="50" class="cashimgkeypad"></button>
                                                         </td>
                                                         <td>
-                                                            <button style="background:url({{ asset('images/note100.gif') }}) no-repeat;" data-value="100" class="cashimgkeypad"></button>
+                                                            <button style="background:url({{ asset('bundles/aka/images/note100.gif') }}) no-repeat;" data-value="100" class="cashimgkeypad"></button>
                                                         </td>
                                                         <td>
-                                                            <button style="background:url({{ asset('images/note200.gif') }}) no-repeat;" data-value="200" class="cashimgkeypad"></button>
+                                                            <button style="background:url({{ asset('bundles/aka/images/note200.gif') }}) no-repeat;" data-value="200" class="cashimgkeypad"></button>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -439,7 +439,7 @@
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
-    <script type="text/babel" src="{{ asset('js/main.react.js') }}"></script>
+    <script type="text/babel" src="{{ asset('bundles/aka/js/main.react.js') }}"></script>
     <script type="text/javascript">
         const winHeight = window.innerHeight;
         const winWidth = window.innerWidth;

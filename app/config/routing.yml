@@ -1,7 +1,6 @@
-aka:
-    resource: "@AkaBundle/Controller/"
-    type:     annotation
-    prefix:   /
+aka_index:
+    path: /aka
+    defaults: {_controller: AkaBundle:Default:index}
 
 app:
     resource: '@AppBundle/Controller/'

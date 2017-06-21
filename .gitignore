@@ -14,4 +14,5 @@
 !var/sessions/.gitkeep
 !var/SymfonyRequirements.php
 /vendor/
-/web/bundles/
+# this would get rid of the symlink to the assets
+# /web/bundles/
