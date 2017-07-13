@@ -439,7 +439,6 @@
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
-    <script type="text/babel" src="{{ asset('bundles/aka/js/main.react.js') }}"></script>
     <script type="text/javascript">
         const winHeight = window.innerHeight;
         const winWidth = window.innerWidth;
@@ -448,5 +447,9 @@
         document.getElementById('row2').setAttribute('style','width:'+winWidth+'px;height:'+winHeight*7.3/12+'px;margin-top:'+winHeight*1.4/12+'px;');
         document.getElementById('row3').setAttribute('style','width:'+winWidth+'px;height:'+winHeight*2.5/12+'px;margin-top:'+winHeight*8.7/12+'px;');
         document.getElementById('row4').setAttribute('style','width:'+winWidth+'px;height:'+winHeight*0.8/12+'px;margin-top:'+winHeight*11.2/12+'px;');
+
+        let event = "{{ event }}";
+        console.log(event);
     </script>
+    <script type="text/babel" src="{{ asset('bundles/aka/js/main.react.js') }}"></script>
 {% endblock %}

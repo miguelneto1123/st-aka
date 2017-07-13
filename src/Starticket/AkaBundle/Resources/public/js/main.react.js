@@ -1,3 +1,58 @@
+class ClockAndModals extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {date: new Date()};
+    }
+
+    componentDidMount(){
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
+    }
+
+    componentWillUnmount(){
+        clearInterval(this.timerID);
+    }
+
+    tick() {
+        this.setState({
+            date: new Date()
+        });
+    }
+
+    render() {
+        return(
+            <div id="row0_box2" style={{width: window.innerWidth * 4 / 5, marginLeft: window.innerWidth / 5}}>
+                <div id="row0_box2_div1">
+                        <span id="row0_box2_table1_clock">
+                            <span>{this.state.date.toLocaleDateString()} {this.state.date.toLocaleTimeString()}</span>
+                        </span>
+                    <span id="row0_box2_table1_help">
+                            <span className="glyphicon glyphicon-exclamation-sign"
+                                  data-toggle="modal" data-target={this.props.helpModalId}></span>
+                        </span>
+                    <span id="row0_box2_table1_settings">
+                            <span className="glyphicon glyphicon-cog"></span>
+                        </span>
+                    <span id="row0_box2_table1_refresh">
+                            <span className="glyphicon glyphicon-refresh"></span>
+                        </span>
+                </div>
+                <div id="row0_box2_div2">
+                    <div id="row0_box2_table1_selectedScenario">
+                        <span id="selectedEvent">{this.props.eventName}</span>
+                        <span id="selectedShow"></span>
+                        <span id="selectedCont"></span>
+                        <span id="selectedCat"></span>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+
 class Row0 extends React.Component {
     constructor(){
         super();
@@ -12,10 +67,6 @@ class Row0 extends React.Component {
             styleBox1: {
                 width: window.innerWidth / 5,
                 height: Math.floor(window.innerHeight*1.4/12),
-            },
-            styleBox2: {
-                width: window.innerWidth * 4 / 5,
-                marginLeft: window.innerWidth / 5,
             },
         });
     }
@@ -35,44 +86,17 @@ class Row0 extends React.Component {
                         </tr>
                     </table>
                 </div>
-                <div id="row0_box2" style={this.state.styleBox2}>
-                    <div id="row0_box2_div1">
-                        <span id="row0_box2_table1_clock">
-                            <span>{new Date().toLocaleDateString()} {new Date().toLocaleTimeString()}</span>
-                        </span>
-                        <span id="row0_box2_table1_help">
-                            <span className="glyphicon glyphicon-exclamation-sign" data-toggle="modal" data-target="#helpModal"></span>
-                        </span>
-                        <span id="row0_box2_table1_settings">
-                            <span className="glyphicon glyphicon-cog"></span>
-                        </span>
-                        <span id="row0_box2_table1_refresh">
-                            <span className="glyphicon glyphicon-refresh"></span>
-                        </span>
-                    </div>
-                    <div id="row0_box2_div2">
-                        <div id="row0_box2_table1_selectedScenario">
-                            <span id="selectedEvent">Schulungsevent</span>
-                            <span id="selectedShow"></span>
-                            <span id="selectedCont"></span>
-                            <span id="selectedCat"></span>
-                        </div>
-                    </div>
-                </div>
+                <ClockAndModals helpModalId="#helpModal" eventName={event}/>
             </div>
         );
     }
 }
 
-function tick() {
-    ReactDOM.render(
-        <Row0 />,
-        document.getElementById('row0')
-    );
+ReactDOM.render(
+    <Row0 />,
+    document.getElementById('row0')
+);
 
-}
-
-setInterval(tick,1000)
 //=======================================================
 class Row1 extends React.Component {
     constructor(){
