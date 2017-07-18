@@ -9,8 +9,14 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
+        $obj = array(
+            'name' => 'John Doe',
+            'age' => 35,
+            'address' => 'Main St. 35'
+        );
         return $this->render('AkaBundle:Default:index.html.twig', array(
-            'event' => "Schulungsevent"
+            'event' => "Schulungsevent",
+            'info' => json_encode($obj)
         ));
     }
 }

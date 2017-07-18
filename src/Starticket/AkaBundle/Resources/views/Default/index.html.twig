@@ -408,7 +408,7 @@
 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary normalbtn" id="help_Back_button"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;&nbsp;Back</button>
+                    <button type="button" class="btn btn-primary normalbtn" data-dismiss="modal" aria-hidden="true" id="help_Back_button"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;&nbsp;Back</button>
                 </div>
             </div>
         </div>
@@ -449,7 +449,8 @@
         document.getElementById('row4').setAttribute('style','width:'+winWidth+'px;height:'+winHeight*0.8/12+'px;margin-top:'+winHeight*11.2/12+'px;');
 
         let event = "{{ event }}";
-        console.log(event);
+        let info = JSON.parse("{{ info|escape('js') }}");
+        console.log(info);
     </script>
     <script type="text/babel" src="{{ asset('bundles/aka/js/main.react.js') }}"></script>
 {% endblock %}

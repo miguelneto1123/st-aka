@@ -22,8 +22,12 @@ class ClockAndModals extends React.Component {
     }
 
     render() {
+        var styleBox2 = {
+            width: window.innerWidth * 4 / 5,
+            marginLeft: window.innerWidth / 5
+        };
         return(
-            <div id="row0_box2" style={{width: window.innerWidth * 4 / 5, marginLeft: window.innerWidth / 5}}>
+            <div id="row0_box2" style={styleBox2}>
                 <div id="row0_box2_div1">
                         <span id="row0_box2_table1_clock">
                             <span>{this.state.date.toLocaleDateString()} {this.state.date.toLocaleTimeString()}</span>
@@ -52,40 +56,38 @@ class ClockAndModals extends React.Component {
     }
 }
 
+function SourceLogo() {
+    var styleBox1 = {
+        width: window.innerWidth / 5,
+        height: Math.floor(window.innerHeight*1.4/12),
+    };
+    var sourceLogo = "bundles/aka/images/";
+    const rowWidth = styleBox1.width*8/10;
+    sourceLogo += rowWidth > 0 && rowWidth < 150 ? "logo100.png" : rowWidth < 200 ? "logo150.png" : "logo200.png";
+
+    return(
+        <div id="row0_box1" style={styleBox1}>
+            <table id="row0_box1_table1">
+                <tr>
+                    <td>
+                        <img src={sourceLogo} />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    );
+}
+
 
 class Row0 extends React.Component {
     constructor(){
         super();
-        this.state = {
-           styleBox1: {},
-           styleBox2: {},
-        };
-    }
-
-    componentDidMount() {
-        this.setState({
-            styleBox1: {
-                width: window.innerWidth / 5,
-                height: Math.floor(window.innerHeight*1.4/12),
-            },
-        });
     }
 
     render(){
-        var sourceLogo = "bundles/aka/images/";
-        const rowWidth = this.state.styleBox1.width*8/10;
-        sourceLogo += rowWidth > 0 && rowWidth < 150 ? "logo100.png" : rowWidth < 200 ? "logo150.png" : "logo200.png";
         return(
             <div>
-                <div id="row0_box1" style={this.state.styleBox1}>
-                    <table id="row0_box1_table1">
-                        <tr>
-                            <td>
-                                <img src={sourceLogo} />
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+                <SourceLogo/>
                 <ClockAndModals helpModalId="#helpModal" eventName={event}/>
             </div>
         );
