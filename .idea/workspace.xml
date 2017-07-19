@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e9d2dc9-cce0-400d-8a4f-81b2a3f59262" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Starticket/AkaBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/Starticket/AkaBundle/Controller/DefaultController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Starticket/AkaBundle/Resources/public/js/main.react.js" afterPath="$PROJECT_DIR$/src/Starticket/AkaBundle/Resources/public/js/main.react.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Starticket/AkaBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/Starticket/AkaBundle/Resources/views/Default/index.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,8 +41,8 @@
       <file leaf-file-name="main.react.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Starticket/AkaBundle/Resources/public/js/main.react.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1440">
-              <caret line="0" column="46" lean-forward="false" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+            <state relative-caret-position="160">
+              <caret line="125" column="6" lean-forward="false" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -130,9 +127,9 @@
         <option value="$PROJECT_DIR$/src/Starticket/AkaBundle/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/Starticket/AkaBundle/Resources/public/js/main.react.js" />
         <option value="$PROJECT_DIR$/src/Starticket/AkaBundle/Controller/DefaultController.php" />
         <option value="$PROJECT_DIR$/src/Starticket/AkaBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Starticket/AkaBundle/Resources/public/js/main.react.js" />
       </list>
     </option>
   </component>
@@ -555,12 +552,12 @@
       <workItem from="1498013725680" duration="544000" />
       <workItem from="1498014357327" duration="1622000" />
       <workItem from="1499673233039" duration="2036000" />
-      <workItem from="1499965217803" duration="6081000" />
+      <workItem from="1499965217803" duration="10652000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56680000" />
+    <option name="totallyTimeSpent" value="61251000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -934,8 +931,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Starticket/AkaBundle/Resources/public/js/main.react.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1440">
-          <caret line="0" column="46" lean-forward="false" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
+        <state relative-caret-position="160">
+          <caret line="125" column="6" lean-forward="false" selection-start-line="125" selection-start-column="6" selection-end-line="125" selection-end-column="6" />
           <folding />
         </state>
       </provider>
